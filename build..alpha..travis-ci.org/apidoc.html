@@ -1,0 +1,1778 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://router5.github.io"
+
+    >router5 (v4.5.2)</a>
+</h1>
+<h4>A simple, powerful, view-agnostic, modular and extensible router</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5">module router5</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.RouteNode">
+            function <span class="apidocSignatureSpan">router5.</span>RouteNode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.createRouter">
+            function <span class="apidocSignatureSpan">router5.</span>createRouter
+            <span class="apidocSignatureSpan">(routes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.default">
+            function <span class="apidocSignatureSpan">router5.</span>default
+            <span class="apidocSignatureSpan">(routes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.loggerPlugin">
+            function <span class="apidocSignatureSpan">router5.</span>loggerPlugin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.transitionPath">
+            function <span class="apidocSignatureSpan">router5.</span>transitionPath
+            <span class="apidocSignatureSpan">(toState, fromState)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>clone</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>constants</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>create_router</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>errorCodes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>middleware</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>navigation</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>plugins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>resolve</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>route_lifecycle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>router_lifecycle</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">router5.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.clone">module router5.clone</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.clone.default">
+            function <span class="apidocSignatureSpan">router5.clone.</span>default
+            <span class="apidocSignatureSpan">(router, createRouter)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.create_router">module router5.create_router</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.create_router.default">
+            function <span class="apidocSignatureSpan">router5.create_router.</span>default
+            <span class="apidocSignatureSpan">(routes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.middleware">module router5.middleware</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.middleware.default">
+            function <span class="apidocSignatureSpan">router5.middleware.</span>default
+            <span class="apidocSignatureSpan">(router)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.navigation">module router5.navigation</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.navigation.default">
+            function <span class="apidocSignatureSpan">router5.navigation.</span>default
+            <span class="apidocSignatureSpan">(router)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.plugins">module router5.plugins</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.plugins.default">
+            function <span class="apidocSignatureSpan">router5.plugins.</span>default
+            <span class="apidocSignatureSpan">(router)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.resolve">module router5.resolve</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.resolve.default">
+            function <span class="apidocSignatureSpan">router5.resolve.</span>default
+            <span class="apidocSignatureSpan">(functions, _ref, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.route_lifecycle">module router5.route_lifecycle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.route_lifecycle.default">
+            function <span class="apidocSignatureSpan">router5.route_lifecycle.</span>default
+            <span class="apidocSignatureSpan">(router)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.router_lifecycle">module router5.router_lifecycle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.router_lifecycle.default">
+            function <span class="apidocSignatureSpan">router5.router_lifecycle.</span>default
+            <span class="apidocSignatureSpan">(router)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.router5.utils">module router5.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.router5.utils.default">
+            function <span class="apidocSignatureSpan">router5.utils.</span>default
+            <span class="apidocSignatureSpan">(router)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5" id="apidoc.module.router5">module router5</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.RouteNode" id="apidoc.element.router5.RouteNode">
+        function <span class="apidocSignatureSpan">router5.</span>RouteNode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RouteNode() {
+    var name = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : &#x27;&#x27;;
+    var path = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : &#x27;&#x27;;
+    var childRoutes = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : [];
+    var cb = arguments[3];
+    var parent = arguments[4];
+
+    _classCallCheck(this, RouteNode);
+
+    this.name = name;
+    this.absolute = /^~/.test(path);
+    this.path = this.absolute ? path.slice(1) : path;
+    this.parser = this.path ? new _pathParser2.default(this.path) : null;
+    this.children = [];
+    this.parent = parent;
+
+    this.checkParents();
+
+    this.add(childRoutes, cb);
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.router5.createRouter" id="apidoc.element.router5.createRouter">
+        function <span class="apidocSignatureSpan">router5.</span>createRouter
+        <span class="apidocSignatureSpan">(routes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createRouter(routes) {
+    var opts = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
+    var deps = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : {};
+
+    var routerState = null;
+    var stateId = 0;
+    var callbacks = {};
+    var dependencies = deps;
+    var options = _extends({}, defaultOptions);
+
+    Object.keys(opts).forEach(function (opt) {
+        return setOption(opt, opts[opt]);
+    });
+
+    var router = {
+        rootNode: rootNode,
+        getOptions: getOptions,
+        setOption: setOption,
+        getState: getState,
+        setState: setState,
+        makeState: makeState,
+        makeNotFoundState: makeNotFoundState,
+        setDependency: setDependency,
+        setDependencies: setDependencies,
+        getDependencies: getDependencies,
+        add: add,
+        addNode: addNode,
+        executeFactory: executeFactory,
+        addEventListener: addEventListener,
+        removeEventListener: removeEventListener,
+        invokeEventListeners: invokeEventListeners
+    };
+
+<span class="apidocCodeCommentSpan">    /**
+     * Invoke all event listeners by event name. Possible event names are listed under constants
+     * (`import { constants } from &#x27;router5&#x27;`): `ROUTER_START`, `ROUTER_STOP`, `TRANSITION_START`,
+     * `TRANSITION_CANCEL`, `TRANSITION_SUCCESS`, `TRANSITION_ERROR`.
+     * This method is used internally and should not be invoked directly, but it can be useful for
+     * testing purposes.
+     * @private
+     * @name invokeEventListeners
+     * @param  {String}    eventName The event name
+     */
+</span>    function invokeEventListeners(eventName) {
+        for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+            args[_key - 1] = arguments[_key];
+        }
+
+        (callbacks[eventName] || []).forEach(function (cb) {
+            return cb.apply(undefined, args);
+        });
+    }
+
+    /**
+     * Removes an event listener
+     * @private
+     * @param  {String}   eventName The event name
+     * @param  {Function} cb        The callback to remove
+     */
+    function removeEventListener(eventName, cb) {
+        callbacks[eventName] = callbacks[eventName].filter(function (_cb) {
+            return _cb !== cb;
+        });
+    }
+
+    /**
+     * Add an event listener
+     * @private
+     * @param {String}   eventName The event name
+     * @param {Function} cb        The callback to add
+     */
+    function addEventListener(eventName, cb) {
+        callbacks[eventName] = (callbacks[eventName] || []).concat(cb);
+
+        return function () {
+            return removeEventListener(eventName, cb);
+        };
+    }
+
+    (0, _utils2.default)(router);
+    (0, _plugins2.default)(router);
+    (0, _middleware2.default)(router);
+    (0, _routeLifecycle2.default)(router);
+    (0, _routerLifecycle2.default)(router);
+    (0, _navigation2.default)(router);
+    (0, _clone2.default)(router, createRouter);
+
+    var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.default(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+    router.rootNode = rootNode;
+
+    return router;
+
+    function addCanActivate(route) {
+        if (route.canActivate) router.canActivate(route.name, route.canActivate);
+    }
+
+    /**
+     * Build a state object
+     * @param  {String} name         The state name
+     * @param  {Object} params       The state params
+     * @param  {String} path         The state path
+     * @param  {Object} [metaParams] Description of the state params
+     * @param  {String} [source]     The source of the routing state
+     * @return {Object}              The state object
+     */
+    function makeState(name, params, path, metaParams, source) {
+        var state = {};
+        var setProp = function setProp(key, value) {
+            return Object.defineProperty(state, key, { value: value, enumerable: true });
+        };
+        setProp(&#x27;name&#x27;, name);
+        setProp(&#x27;params&#x27;, params);
+        setProp(&#x27;path&#x27;, path);
+
+        if (metaParams || source) {
+            stateId += 1;
+            var meta = { params: metaParams, id: stateId }; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.router5.default" id="apidoc.element.router5.default">
+        function <span class="apidocSignatureSpan">router5.</span>default
+        <span class="apidocSignatureSpan">(routes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createRouter(routes) {
+    var opts = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
+    var deps = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : {};
+
+    var routerState = null;
+    var stateId = 0;
+    var callbacks = {};
+    var dependencies = deps;
+    var options = _extends({}, defaultOptions);
+
+    Object.keys(opts).forEach(function (opt) {
+        return setOption(opt, opts[opt]);
+    });
+
+    var router = {
+        rootNode: rootNode,
+        getOptions: getOptions,
+        setOption: setOption,
+        getState: getState,
+        setState: setState,
+        makeState: makeState,
+        makeNotFoundState: makeNotFoundState,
+        setDependency: setDependency,
+        setDependencies: setDependencies,
+        getDependencies: getDependencies,
+        add: add,
+        addNode: addNode,
+        executeFactory: executeFactory,
+        addEventListener: addEventListener,
+        removeEventListener: removeEventListener,
+        invokeEventListeners: invokeEventListeners
+    };
+
+<span class="apidocCodeCommentSpan">    /**
+     * Invoke all event listeners by event name. Possible event names are listed under constants
+     * (`import { constants } from &#x27;router5&#x27;`): `ROUTER_START`, `ROUTER_STOP`, `TRANSITION_START`,
+     * `TRANSITION_CANCEL`, `TRANSITION_SUCCESS`, `TRANSITION_ERROR`.
+     * This method is used internally and should not be invoked directly, but it can be useful for
+     * testing purposes.
+     * @private
+     * @name invokeEventListeners
+     * @param  {String}    eventName The event name
+     */
+</span>    function invokeEventListeners(eventName) {
+        for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+            args[_key - 1] = arguments[_key];
+        }
+
+        (callbacks[eventName] || []).forEach(function (cb) {
+            return cb.apply(undefined, args);
+        });
+    }
+
+    /**
+     * Removes an event listener
+     * @private
+     * @param  {String}   eventName The event name
+     * @param  {Function} cb        The callback to remove
+     */
+    function removeEventListener(eventName, cb) {
+        callbacks[eventName] = callbacks[eventName].filter(function (_cb) {
+            return _cb !== cb;
+        });
+    }
+
+    /**
+     * Add an event listener
+     * @private
+     * @param {String}   eventName The event name
+     * @param {Function} cb        The callback to add
+     */
+    function addEventListener(eventName, cb) {
+        callbacks[eventName] = (callbacks[eventName] || []).concat(cb);
+
+        return function () {
+            return removeEventListener(eventName, cb);
+        };
+    }
+
+    (0, _utils2.default)(router);
+    (0, _plugins2.default)(router);
+    (0, _middleware2.default)(router);
+    (0, _routeLifecycle2.default)(router);
+    (0, _routerLifecycle2.default)(router);
+    (0, _navigation2.default)(router);
+    (0, _clone2.default)(router, createRouter);
+
+    var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.default(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+    router.rootNode = rootNode;
+
+    return router;
+
+    function addCanActivate(route) {
+        if (route.canActivate) router.canActivate(route.name, route.canActivate);
+    }
+
+    /**
+     * Build a state object
+     * @param  {String} name         The state name
+     * @param  {Object} params       The state params
+     * @param  {String} path         The state path
+     * @param  {Object} [metaParams] Description of the state params
+     * @param  {String} [source]     The source of the routing state
+     * @return {Object}              The state object
+     */
+    function makeState(name, params, path, metaParams, source) {
+        var state = {};
+        var setProp = function setProp(key, value) {
+            return Object.defineProperty(state, key, { value: value, enumerable: true });
+        };
+        setProp(&#x27;name&#x27;, name);
+        setProp(&#x27;params&#x27;, params);
+        setProp(&#x27;path&#x27;, path);
+
+        if (metaParams || source) {
+            stateId += 1;
+            var meta = { params: metaParams, id: stateId }; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.router5.loggerPlugin" id="apidoc.element.router5.loggerPlugin">
+        function <span class="apidocSignatureSpan">router5.</span>loggerPlugin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggerPlugin() {
+    var startGroup = function startGroup() {
+        return console.group(&#x27;Router transition&#x27;);
+    };
+    var endGroup = function endGroup() {
+        return console.groupEnd(&#x27;Router transition&#x27;);
+    };
+
+    console.info(&#x27;Router started&#x27;);
+
+    return {
+        onStop: function onStop() {
+            console.info(&#x27;Router stopped&#x27;);
+        },
+        onTransitionStart: function onTransitionStart(toState, fromState) {
+            endGroup();
+            startGroup();
+            console.log(&#x27;Transition started from state&#x27;);
+            console.log(fromState);
+            console.log(&#x27;To state&#x27;);
+            console.log(toState);
+        },
+        onTransitionCancel: function onTransitionCancel() {
+            console.warn(&#x27;Transition cancelled&#x27;);
+        },
+        onTransitionError: function onTransitionError(toState, fromState, err) {
+            console.warn(&#x27;Transition error with code &#x27; + err.code);
+            endGroup();
+        },
+        onTransitionSuccess: function onTransitionSuccess() {
+            console.log(&#x27;Transition success&#x27;);
+            endGroup();
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.router5.transitionPath" id="apidoc.element.router5.transitionPath">
+        function <span class="apidocSignatureSpan">router5.</span>transitionPath
+        <span class="apidocSignatureSpan">(toState, fromState)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transitionPath(toState, fromState) {
+    var fromStateIds = fromState ? nameToIDs(fromState.name) : [];
+    var toStateIds = nameToIDs(toState.name);
+    var maxI = Math.min(fromStateIds.length, toStateIds.length);
+
+    function pointOfDifference() {
+        var i = void 0;
+
+        var _loop = function _loop() {
+            var left = fromStateIds[i];
+            var right = toStateIds[i];
+
+            if (left !== right) return {
+                    v: i
+                };
+
+            var leftParams = extractSegmentParams(left, toState);
+            var rightParams = extractSegmentParams(right, fromState);
+
+            if (leftParams.length !== rightParams.length) return {
+                    v: i
+                };
+            if (leftParams.length === 0) return &#x27;continue&#x27;;
+
+            var different = Object.keys(leftParams).some(function (p) {
+                return rightParams[p] !== leftParams[p];
+            });
+            if (different) {
+                return {
+                    v: i
+                };
+            }
+        };
+
+        for (i = 0; i &#x3c; maxI; i += 1) {
+            var _ret = _loop();
+
+            switch (_ret) {
+                case &#x27;continue&#x27;:
+                    continue;
+
+                default:
+                    if ((typeof _ret === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(_ret)) === &#x22;object&#x22;) return _ret.v;
+            }
+        }
+
+        return i;
+    }
+
+    var i = void 0;
+    if (!fromState) {
+        i = 0;
+    } else if (!hasMetaParams(fromState) &#x26;&#x26; !hasMetaParams(toState)) {
+        console.warn(&#x27;[router5.transition-path] Some states are missing metadata, reloading all segments&#x27;);
+        i = 0;
+    } else {
+        i = pointOfDifference();
+    }
+
+    var toDeactivate = fromStateIds.slice(i).reverse();
+    var toActivate = toStateIds.slice(i);
+
+    var intersection = fromState &#x26;&#x26; i &#x3e; 0 ? fromStateIds[i - 1] : &#x27;&#x27;;
+
+    return {
+        intersection: intersection,
+        toDeactivate: toDeactivate,
+        toActivate: toActivate
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.clone" id="apidoc.module.router5.clone">module router5.clone</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.clone.default" id="apidoc.element.router5.clone.default">
+        function <span class="apidocSignatureSpan">router5.clone.</span>default
+        <span class="apidocSignatureSpan">(router, createRouter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function withCloning(router, createRouter) {
+    router.clone = clone;
+
+<span class="apidocCodeCommentSpan">    /**
+     * Clone the current router configuration. The new returned router will be non-started,
+     * with a null state
+     * @param  {[type]} deps [description]
+     * @return {[type]}      [description]
+     */
+</span>    function clone() {
+        var deps = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {};
+
+        var clonedDependencies = _extends({}, router.getDependencies(), deps);
+        var clonedRouter = createRouter(router.rootNode, router.getOptions(), clonedDependencies);
+
+        clonedRouter.useMiddleware.apply(clonedRouter, _toConsumableArray(router.getMiddlewareFactories()));
+        clonedRouter.usePlugin.apply(clonedRouter, _toConsumableArray(router.getPlugins()));
+
+        var _router$getLifecycleF = router.getLifecycleFactories(),
+            _router$getLifecycleF2 = _slicedToArray(_router$getLifecycleF, 2),
+            canDeactivateFactories = _router$getLifecycleF2[0],
+            canActivateFactories = _router$getLifecycleF2[1];
+
+        Object.keys(canDeactivateFactories).forEach(function (name) {
+            return clonedRouter.canDeactivate(name, canDeactivateFactories[name]);
+        });
+        Object.keys(canActivateFactories).forEach(function (name) {
+            return clonedRouter.canActivate(name, canActivateFactories[name]);
+        });
+
+        return clonedRouter;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.create_router" id="apidoc.module.router5.create_router">module router5.create_router</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.create_router.default" id="apidoc.element.router5.create_router.default">
+        function <span class="apidocSignatureSpan">router5.create_router.</span>default
+        <span class="apidocSignatureSpan">(routes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createRouter(routes) {
+    var opts = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
+    var deps = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : {};
+
+    var routerState = null;
+    var stateId = 0;
+    var callbacks = {};
+    var dependencies = deps;
+    var options = _extends({}, defaultOptions);
+
+    Object.keys(opts).forEach(function (opt) {
+        return setOption(opt, opts[opt]);
+    });
+
+    var router = {
+        rootNode: rootNode,
+        getOptions: getOptions,
+        setOption: setOption,
+        getState: getState,
+        setState: setState,
+        makeState: makeState,
+        makeNotFoundState: makeNotFoundState,
+        setDependency: setDependency,
+        setDependencies: setDependencies,
+        getDependencies: getDependencies,
+        add: add,
+        addNode: addNode,
+        executeFactory: executeFactory,
+        addEventListener: addEventListener,
+        removeEventListener: removeEventListener,
+        invokeEventListeners: invokeEventListeners
+    };
+
+<span class="apidocCodeCommentSpan">    /**
+     * Invoke all event listeners by event name. Possible event names are listed under constants
+     * (`import { constants } from &#x27;router5&#x27;`): `ROUTER_START`, `ROUTER_STOP`, `TRANSITION_START`,
+     * `TRANSITION_CANCEL`, `TRANSITION_SUCCESS`, `TRANSITION_ERROR`.
+     * This method is used internally and should not be invoked directly, but it can be useful for
+     * testing purposes.
+     * @private
+     * @name invokeEventListeners
+     * @param  {String}    eventName The event name
+     */
+</span>    function invokeEventListeners(eventName) {
+        for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+            args[_key - 1] = arguments[_key];
+        }
+
+        (callbacks[eventName] || []).forEach(function (cb) {
+            return cb.apply(undefined, args);
+        });
+    }
+
+    /**
+     * Removes an event listener
+     * @private
+     * @param  {String}   eventName The event name
+     * @param  {Function} cb        The callback to remove
+     */
+    function removeEventListener(eventName, cb) {
+        callbacks[eventName] = callbacks[eventName].filter(function (_cb) {
+            return _cb !== cb;
+        });
+    }
+
+    /**
+     * Add an event listener
+     * @private
+     * @param {String}   eventName The event name
+     * @param {Function} cb        The callback to add
+     */
+    function addEventListener(eventName, cb) {
+        callbacks[eventName] = (callbacks[eventName] || []).concat(cb);
+
+        return function () {
+            return removeEventListener(eventName, cb);
+        };
+    }
+
+    (0, _utils2.default)(router);
+    (0, _plugins2.default)(router);
+    (0, _middleware2.default)(router);
+    (0, _routeLifecycle2.default)(router);
+    (0, _routerLifecycle2.default)(router);
+    (0, _navigation2.default)(router);
+    (0, _clone2.default)(router, createRouter);
+
+    var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.default(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+    router.rootNode = rootNode;
+
+    return router;
+
+    function addCanActivate(route) {
+        if (route.canActivate) router.canActivate(route.name, route.canActivate);
+    }
+
+    /**
+     * Build a state object
+     * @param  {String} name         The state name
+     * @param  {Object} params       The state params
+     * @param  {String} path         The state path
+     * @param  {Object} [metaParams] Description of the state params
+     * @param  {String} [source]     The source of the routing state
+     * @return {Object}              The state object
+     */
+    function makeState(name, params, path, metaParams, source) {
+        var state = {};
+        var setProp = function setProp(key, value) {
+            return Object.defineProperty(state, key, { value: value, enumerable: true });
+        };
+        setProp(&#x27;name&#x27;, name);
+        setProp(&#x27;params&#x27;, params);
+        setProp(&#x27;path&#x27;, path);
+
+        if (metaParams || source) {
+            stateId += 1;
+            var meta = { params: metaParams, id: stateId }; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.middleware" id="apidoc.module.router5.middleware">module router5.middleware</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.middleware.default" id="apidoc.element.router5.middleware.default">
+        function <span class="apidocSignatureSpan">router5.middleware.</span>default
+        <span class="apidocSignatureSpan">(router)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function withMiddleware(router) {
+    var middlewareFactories = [];
+    var middlewareFunctions = [];
+
+    router.useMiddleware = useMiddleware;
+    router.getMiddlewareFactories = getMiddlewareFactories;
+    router.getMiddlewareFunctions = getMiddlewareFunctions;
+    router.clearMiddleware = clearMiddleware;
+
+<span class="apidocCodeCommentSpan">    /**
+     * Register middleware functions.
+     * @param  {...Function} middlewares The middleware functions
+     * @return {Object}                  The router instance
+     */
+</span>    function useMiddleware() {
+        for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+            middlewares[_key] = arguments[_key];
+        }
+
+        middlewares.forEach(addMiddleware);
+
+        return router;
+    }
+
+    /**
+     * Remove all middleware functions
+     * @return {Object} The router instance
+     */
+    function clearMiddleware() {
+        middlewareFactories = [];
+        middlewareFunctions = [];
+
+        return router;
+    }
+
+    function getMiddlewareFactories() {
+        return middlewareFactories;
+    }
+
+    function getMiddlewareFunctions() {
+        return middlewareFunctions;
+    }
+
+    function addMiddleware(middleware) {
+        middlewareFactories.push(middleware);
+        middlewareFunctions.push(router.executeFactory(middleware));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.navigation" id="apidoc.module.router5.navigation">module router5.navigation</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.navigation.default" id="apidoc.element.router5.navigation.default">
+        function <span class="apidocSignatureSpan">router5.navigation.</span>default
+        <span class="apidocSignatureSpan">(router)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function withNavigation(router) {
+    var cancelCurrentTransition = void 0;
+
+    router.navigate = navigate;
+    router.navigateToDefault = navigateToDefault;
+    router.transitionToState = transitionToState;
+    router.cancel = cancel;
+
+<span class="apidocCodeCommentSpan">    /**
+     * Cancel the current transition if there is one
+     * @return {Object} The router instance
+     */
+</span>    function cancel() {
+        if (cancelCurrentTransition) {
+            cancelCurrentTransition(&#x27;navigate&#x27;);
+            cancelCurrentTransition = null;
+        }
+
+        return router;
+    }
+
+    /**
+     * Navigate to a route
+     * @param  {String}   routeName      The route name
+     * @param  {Object}   [routeParams]  The route params
+     * @param  {Object}   [options]      The navigation options (`replace`, `reload`)
+     * @param  {Function} [done]         A done node style callback (err, state)
+     * @return {Function}                A cancel function
+     */
+    function navigate() {
+        var _ref;
+
+        var name = arguments.length &#x3c;= 0 ? undefined : arguments[0];
+        var lastArg = (_ref = arguments.length - 1, arguments.length &#x3c;= _ref ? undefined : arguments[_ref]);
+        var done = typeof lastArg === &#x27;function&#x27; ? lastArg : noop;
+        var params = _typeof(arguments.length &#x3c;= 1 ? undefined : arguments[1]) === &#x27;object&#x27; ? arguments.length &#x3c;= 1 ? undefined :
+arguments[1] : {};
+        var opts = _typeof(arguments.length &#x3c;= 2 ? undefined : arguments[2]) === &#x27;object&#x27; ? arguments.length &#x3c;= 2 ? undefined :
+arguments[2] : {};
+
+        if (!router.isStarted()) {
+            done({ code: _constants.errorCodes.ROUTER_NOT_STARTED });
+            return;
+        }
+
+        var route = router.buildState(name, params);
+
+        if (!route) {
+            var err = { code: _constants.errorCodes.ROUTE_NOT_FOUND };
+            done(err);
+            router.invokeEventListeners(_constants2.default.TRANSITION_ERROR, null, router.getState(), err);
+            return;
+        }
+
+        var toState = router.makeState(route.name, route.params, router.buildPath(name, params), route._meta);
+        var sameStates = router.getState() ? router.areStatesEqual(router.getState(), toState, false) : false;
+
+        // Do not proceed further if states are the same and no reload
+        // (no desactivation and no callbacks)
+        if (sameStates &#x26;&#x26; !opts.reload) {
+            var _err = { code: _constants.errorCodes.SAME_STATES };
+            done(_err);
+            router.invokeEventListeners(_constants2.default.TRANSITION_ERROR, toState, router.getState(), _err);
+            return;
+        }
+
+        var fromState = sameStates ? null : router.getState();
+
+        // Transitio
+        return transitionToState(toState, fromState, opts, function (err, state) {
+            if (err) {
+                if (err.redirect) {
+                    var _err$redirect = err.redirect,
+                        _name = _err$redirect.name,
+                        _params = _err$redirect.params;
+
+
+                    navigate(_name, _params, _extends({}, opts, { reload: true }), done);
+                } else {
+                    done(err);
+                }
+            } else {
+                router.invokeEventListeners(_constants2.default.TRANSITION_SUCCESS, state, fromState, opts);
+                done(null, state);
+            }
+        });
+    }
+
+    /**
+     * Navigate to the default route (if defined)
+     * @param  {Object}   [opts] The navigation options
+     * @param  {Function} [done] A done node style callback (err, state)
+     * @return {Function}        A cancel function
+     */
+    function navigateToDefault() {
+        var opts = _typeof(arguments.length &#x3c;= 0 ? undefined : arguments[0]) === &#x27;object&#x27; ? arguments.length &#x3c;= 0 ? undefined :
+arguments[0] : {};
+        var done = arguments.length === 2 ? arguments.length &#x3c;= 1 ? undefined : arguments[1] : typeof (arguments.length &#x3c;= 0 ? undefined
+ : arguments[0]) === &#x27;function&#x27; ? arguments.length &#x3c;= 0 ? undefined : arguments[0] : noop;
+        var options = router.getOptions();
+
+        if (options.defaultRoute) {
+            return na ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.plugins" id="apidoc.module.router5.plugins">module router5.plugins</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.plugins.default" id="apidoc.element.router5.plugins.default">
+        function <span class="apidocSignatureSpan">router5.plugins.</span>default
+        <span class="apidocSignatureSpan">(router)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function withPlugins(router) {
+    var plugins = [];
+    var removePluginListeners = [];
+
+    router.usePlugin = usePlugin;
+    router.hasPlugin = hasPlugin;
+    router.getPlugins = getPlugins;
+
+    function getPlugins() {
+        return plugins;
+    }
+
+<span class="apidocCodeCommentSpan">    /**
+     * Use plugins
+     * @param  {...Function} plugins An argument list of plugins
+     * @return {Object}              The router instance
+     */
+</span>    function usePlugin() {
+        for (var _len = arguments.length, plugins = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+            plugins[_key] = arguments[_key];
+        }
+
+        plugins.forEach(addPlugin);
+        return router;
+    }
+
+    function addPlugin(plugin) {
+        if (!hasPlugin(plugin)) {
+            plugins.push(plugin);
+            startPlugin(plugin);
+        }
+    }
+
+    /**
+     * Check if a plugin has already been registered.
+     * @param  {String}  pluginName The plugin name
+     * @return {Boolean}            Whether the plugin has been registered
+     */
+    function hasPlugin(pluginName) {
+        return plugins.filter(function (p) {
+            return p.pluginName === pluginName || p.name === pluginName;
+        }).length &#x3e; 0;
+    }
+
+    function startPlugin(plugin) {
+        var appliedPlugin = router.executeFactory(plugin);
+
+        var removeEventListeners = pluginMethods.map(function (methodName) {
+            if (appliedPlugin[methodName]) {
+                return router.addEventListener(methodName.toLowerCase().replace(/^on/, &#x27;$$&#x27;).replace(/transition/, &#x27;$$&#x27;), appliedPlugin
+[methodName]);
+            }
+        }).filter(Boolean);
+
+        removePluginListeners.push.apply(removePluginListeners, _toConsumableArray(removeEventListeners));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.resolve" id="apidoc.module.router5.resolve">module router5.resolve</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.resolve.default" id="apidoc.element.router5.resolve.default">
+        function <span class="apidocSignatureSpan">router5.resolve.</span>default
+        <span class="apidocSignatureSpan">(functions, _ref, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolve(functions, _ref, callback) {
+    var isCancelled = _ref.isCancelled,
+        toState = _ref.toState,
+        fromState = _ref.fromState,
+        errorKey = _ref.errorKey;
+
+    var remainingFunctions = Array.isArray(functions) ? functions : Object.keys(functions);
+
+    var isState = function isState(obj) {
+        return (typeof obj === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(obj)) === &#x27;object&#x27; &#x26;&#x26; obj.name !== undefined &#x26;&#x26; obj.params !==
+undefined &#x26;&#x26; obj.path !== undefined;
+    };
+    var hasStateChanged = function hasStateChanged(state) {
+        return state.name !== toState.name || state.params !== toState.params || state.path !== toState.path;
+    };
+
+    var processFn = function processFn(done) {
+        if (!remainingFunctions.length) return true;
+
+        var isMapped = typeof remainingFunctions[0] === &#x27;string&#x27;;
+        var errBase = errorKey &#x26;&#x26; isMapped ? _defineProperty({}, errorKey, remainingFunctions[0]) : {};
+        var stepFn = isMapped ? functions[remainingFunctions[0]] : remainingFunctions[0];
+
+        // const len = stepFn.length;
+        var res = stepFn.call(null, toState, fromState, done);
+        if (isCancelled()) {
+            done(null);
+        } else if (typeof res === &#x27;boolean&#x27;) {
+            done(res ? null : errBase);
+        } else if (res &#x26;&#x26; typeof res.then === &#x27;function&#x27;) {
+            res.then(function (resVal) {
+                if (resVal instanceof Error) done({ error: resVal }, null);else done(null, resVal);
+            }, function (err) {
+                if (err instanceof Error) {
+                    console.error(err.stack || err);
+                    done(_extends({}, errBase, { promiseError: err }), null);
+                } else {
+                    done((typeof err === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(err)) === &#x27;object&#x27; ? _extends({}, errBase, err) : errBase
+, null);
+                }
+            });
+        }
+        // else: wait for done to be called
+
+        return false;
+    };
+
+    var iterate = function iterate(err, val) {
+        if (isCancelled()) {
+            callback();
+        } else if (err) {
+            callback(err);
+        } else {
+            if (val &#x26;&#x26; isState(val)) {
+                if (hasStateChanged(val)) console.error(&#x27;[router5][transition] Warning: state values changed during transition process
+.&#x27;);
+                toState = val;
+            }
+            remainingFunctions = remainingFunctions.slice(1);
+            next();
+        }
+    };
+
+    var next = function next() {
+        if (isCancelled()) {
+            callback();
+        } else {
+            var finished = processFn(iterate);
+            if (finished) callback(null, toState);
+        }
+    };
+
+    next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.route_lifecycle" id="apidoc.module.router5.route_lifecycle">module router5.route_lifecycle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.route_lifecycle.default" id="apidoc.element.router5.route_lifecycle.default">
+        function <span class="apidocSignatureSpan">router5.route_lifecycle.</span>default
+        <span class="apidocSignatureSpan">(router)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function withRouteLifecycle(router) {
+    var canDeactivateFactories = {};
+    var canActivateFactories = {};
+    var canDeactivateFunctions = {};
+    var canActivateFunctions = {};
+
+    router.canDeactivate = canDeactivate;
+    router.canActivate = canActivate;
+    router.getLifecycleFactories = getLifecycleFactories;
+    router.getLifecycleFunctions = getLifecycleFunctions;
+    router.clearCanDeactivate = clearCanDeactivate;
+
+    function getLifecycleFactories() {
+        return [canDeactivateFactories, canActivateFactories];
+    }
+
+    function getLifecycleFunctions() {
+        return [canDeactivateFunctions, canActivateFunctions];
+    }
+
+<span class="apidocCodeCommentSpan">    /**
+     * Register a canDeactivate handler or specify a if a route can be deactivated
+     * @param  {String} name                           The route name
+     * @param  {Function|Boolean} canDeactivateHandler The canDeactivate handler or boolean
+     * @return {Object}                                The router instance
+     */
+</span>    function canDeactivate(name, canDeactivateHandler) {
+        var factory = toFunction(canDeactivateHandler);
+
+        canDeactivateFactories[name] = factory;
+        canDeactivateFunctions[name] = router.executeFactory(factory);
+
+        return router;
+    }
+
+    /**
+     * Remove a canDeactivate handler for a route
+     * @param  {String} name The route name
+     * @return {Object}      The router instance
+     */
+    function clearCanDeactivate(name) {
+        canDeactivateFactories[name] = undefined;
+        canDeactivateFunctions[name] = undefined;
+
+        return router;
+    }
+
+    /**
+     * Register a canActivate handler or specify a if a route can be deactivated
+     * @param  {String} name                         The route name
+     * @param  {Function|Boolean} canActivateHandler The canActivate handler or boolean
+     * @return {Object}                              The router instance
+     */
+    function canActivate(name, canActivateHandler) {
+        var factory = toFunction(canActivateHandler);
+
+        canActivateFactories[name] = factory;
+        canActivateFunctions[name] = router.executeFactory(factory);
+
+        return router;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.router_lifecycle" id="apidoc.module.router5.router_lifecycle">module router5.router_lifecycle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.router_lifecycle.default" id="apidoc.element.router5.router_lifecycle.default">
+        function <span class="apidocSignatureSpan">router5.router_lifecycle.</span>default
+        <span class="apidocSignatureSpan">(router)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function withRouterLifecycle(router) {
+    var started = false;
+    var options = router.getOptions();
+
+    router.isStarted = isStarted;
+    router.start = start;
+    router.stop = stop;
+
+<span class="apidocCodeCommentSpan">    /**
+     * Check if the router is started
+     * @return {Boolean} Whether the router is started or not
+     */
+</span>    function isStarted() {
+        return started;
+    }
+
+    /**
+     * Start the router
+     * @param  {String|Object} startPathOrState The start path or state. This is optional when using the browser plugin.
+     * @param  {Function}      done             A done node style callback (err, state)
+     * @return {Object}                         The router instance
+     */
+    function start() {
+        var _ref;
+
+        var lastArg = (_ref = arguments.length - 1, arguments.length &#x3c;= _ref ? undefined : arguments[_ref]);
+        var done = typeof lastArg === &#x27;function&#x27; ? lastArg : noop;
+        var startPathOrState = typeof (arguments.length &#x3c;= 0 ? undefined : arguments[0]) !== &#x27;function&#x27; ? arguments.length &#x3c;= 0 ?
+undefined : arguments[0] : undefined;
+
+        if (started) {
+            done({ code: _constants.errorCodes.ROUTER_ALREADY_STARTED });
+            return router;
+        }
+
+        var startPath = void 0,
+            startState = void 0;
+
+        started = true;
+        router.invokeEventListeners(_constants2.default.ROUTER_START);
+
+        // callback
+        var cb = function cb(err, state) {
+            var invokeErrCb = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : true;
+
+            if (!err) router.invokeEventListeners(_constants2.default.TRANSITION_SUCCESS, state, null, { replace: true });
+            if (err &#x26;&#x26; invokeErrCb) router.invokeEventListeners(_constants2.default.TRANSITION_ERROR, state, null, err);
+            done(err, state);
+        };
+
+        if (startPathOrState === undefined &#x26;&#x26; !options.defaultRoute) {
+            return cb({ code: _constants.errorCodes.NO_START_PATH_OR_STATE });
+        }if (typeof startPathOrState === &#x27;string&#x27;) {
+            startPath = startPathOrState;
+        } else if ((typeof startPathOrState === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(startPathOrState)) === &#x27;object&#x27;) {
+            startState = startPathOrState;
+        }
+
+        if (!startState) {
+            // If no supplied start state, get start state
+            startState = startPath === undefined ? null : router.matchPath(startPath);
+
+            // Navigate to default function
+            var navigateToDefault = function navigateToDefault() {
+                return router.navigateToDefault({ replace: true }, done);
+            };
+            var redirect = function redirect(route) {
+                return router.navigate(route.name, route.params, { replace: true, reload: true }, done);
+            };
+            // If matched start path
+            if (startState) {
+                router.transitionToState(startState, router.getState(), {}, function (err, state) {
+                    if (!err) cb(null, state);else if (err.redirect) redirect(err.redirect);else if (options.defaultRoute) navigateToDefault
+();else cb(err, null, false);
+                });
+            } else if (options.defaultRoute) {
+                // If default, navigate to default
+                navigateToDefault();
+            } else if (options.allowNotFound) {
+                cb(null, router.makeNotFoundState(startPath));
+            } else {
+                // No start match, no default =&#x3e; do nothing
+                cb({ code: _constants.errorCodes.ROUTE_NOT_FOUND, path: startPath }, null);
+            }
+        } else {
+            // Initialise router with provided start state
+            router.setState(startState);
+            cb(null, startState);
+        }
+
+        return router;
+    }
+
+    /**
+     * Stop the router
+     * @return {Object} The router instance
+     */
+    function stop() {
+        if (started) {
+            router.setState(null);
+            started = false;
+            router.invokeEventListeners(_constants2.default.ROUTER_STOP);
+        }
+
+        return router;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.router5.utils" id="apidoc.module.router5.utils">module router5.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.router5.utils.default" id="apidoc.element.router5.utils.default">
+        function <span class="apidocSignatureSpan">router5.utils.</span>default
+        <span class="apidocSignatureSpan">(router)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function withUtils(router) {
+    var options = router.getOptions();
+
+    router.isActive = isActive;
+    router.areStatesEqual = areStatesEqual;
+    router.areStatesDescendants = areStatesDescendants;
+    router.buildPath = buildPath;
+    router.buildState = buildState;
+    router.matchPath = matchPath;
+    router.setRootPath = setRootPath;
+
+<span class="apidocCodeCommentSpan">    /**
+     * Check if a route is currently active
+     * @param  {String}  name                     The route name
+     * @param  {Object}  params                   The route params
+     * @param  {Boolean} [strictEquality=false]   Whether to check if the given route is the active route, or part of the active
+ route
+     * @param  {Boolean} [ignoreQueryParams=true] Whether to ignore query parameters
+     * @return {Boolean}                          Whether the given route is active
+     */
+</span>    function isActive(name) {
+        var params = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
+        var strictEquality = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : false;
+        var ignoreQueryParams = arguments.length &#x3e; 3 &#x26;&#x26; arguments[3] !== undefined ? arguments[3] : true;
+
+        var activeState = router.getState();
+
+        if (!activeState) return false;
+
+        if (strictEquality || activeState.name === name) {
+            return areStatesEqual(router.makeState(name, params), activeState, ignoreQueryParams);
+        }
+
+        return areStatesDescendants(router.makeState(name, params), activeState);
+    }
+
+    /**
+     * Compare two route state objects
+     * @param  {Object}  state1            The route state
+     * @param  {Object}  state2            The other route state
+     * @param  {Boolean} ignoreQueryParams Whether to ignore query parameters or not
+     * @return {Boolean}                   Whether the two route state are equal or not
+     */
+    function areStatesEqual(state1, state2) {
+        var ignoreQueryParams = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : true;
+
+        if (state1.name !== state2.name) return false;
+
+        var getUrlParams = function getUrlParams(name) {
+            return router.rootNode.getSegmentsByName(name).map(function (segment) {
+                return segment.parser[ignoreQueryParams ? &#x27;urlParams&#x27; : &#x27;params&#x27;];
+            }).reduce(function (params, p) {
+                return params.concat(p);
+            }, []);
+        };
+
+        var state1Params = getUrlParams(state1.name);
+        var state2Params = getUrlParams(state2.name);
+
+        return state1Params.length === state2Params.length &#x26;&#x26; state1Params.every(function (p) {
+            return state1.params[p] === state2.params[p];
+        });
+    }
+
+    /**
+     * Check if two states are related
+     * @param  {State} parentState  The parent state
+     * @param  {State} childState   The child state
+     * @return {Boolean}            Whether the two states are descendants or not
+     */
+    function areStatesDescendants(parentState, childState) {
+        var regex = new RegExp(&#x27;^&#x27; + parentState.name + &#x27;\\.(.*)$&#x27;);
+        if (!regex.test(childState.name)) return false;
+        // If child state name extends parent state name, and all parent state params
+        // are in child state params.
+        return Object.keys(parentState.params).every(function (p) {
+            return parentState.params[p] === childState.params[p];
+        });
+    }
+
+    /**
+     * Build a path
+     * @param  {String} route  The route name
+     * @param  {Object} params The route params
+     * @return {String}        The path
+     */
+    function buildPath(route, params) {
+        if (route === _constants2.default.UNKNOWN_ROUTE) {
+            return params.path;
+        }
+
+        var useTrailingSlash = options.useTrailingSlash,
+            strictQueryParams = options.strictQueryParams;
+
+        return router.rootNode.buildPath(route, params, { trailingSlash: useTrailingSlash, strictQueryParams: strictQueryParams });
+    }
+
+    function buildState(route, params) {
+        return router.rootNode.buildState(route, params);
+    }
+
+    /** ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(0, _plugins2.default)(router);
+(0, _middleware2.default)(router);
+(0, _routeLifecycle2.default)(router);
+(0, _routerLifecycle2.default)(router);
+(0, _navigation2.default)(router);
+(0, _clone2.default)(router, createRouter);
+
+var rootNode = routes instanceof _routeNode2.default ? routes : new _routeNode2.<span class="apidocCodeKeywordSpan">default</span
+>(&#x27;&#x27;, &#x27;&#x27;, routes, addCanActivate);
+
+router.rootNode = rootNode;
+
+return router;
+
+function addCanActivate(route) {
+    if (route.canActivate) router.canActivate(route.name, route.canActivate);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
